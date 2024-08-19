@@ -447,35 +447,6 @@ html:not(.app-focused) .typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a93
 
 /*
  *
- *	APP WATERMARK
- *
- */
-.wordmark_a934d8.wordmarkWindows_a934d8 {
-  width: auto;
-  height: var(--app-title-bar-height);
-  padding: 0 0 0 4px;
-  line-height: var(--app-title-bar-height);
-  font-size: 0.9em;
-  color: var(--text-normal);
-}
-.wordmark_a934d8.wordmarkWindows_a934d8:before, .wordmark_a934d8.wordmarkWindows_a934d8:after {
-  position: relative;
-  width: auto;
-  height: var(--app-title-bar-height);
-}
-.wordmark_a934d8.wordmarkWindows_a934d8:before {
-  content: var(--app-watermark-one);
-  font-weight: 700;
-}
-.wordmark_a934d8.wordmarkWindows_a934d8:after {
-  content: var(--app-watermark-two);
-}
-.wordmark_a934d8.wordmarkWindows_a934d8 svg {
-  display: none;
-}
-
-/*
- *
  *	CHANNELS LIST
  *
  */
