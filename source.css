@@ -368,6 +368,13 @@ body,
  *	APP TITLEBAR
  *
  */
+.typeWindows_a934d8.withFrame_a934d8 {
+  height: var(--app-title-bar-height);
+  margin-top: 0;
+}
+.typeWindows_a934d8 .winButton_a934d8 {
+  height: var(--app-title-bar-height);
+  top: 0;
 .platform-win .typeWindows_a934d8 {
   z-index: 102;
   position: absolute;
