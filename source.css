@@ -368,82 +368,116 @@ body,
  *	APP TITLEBAR
  *
  */
-.typeWindows_a934d8.withFrame_a934d8 {
-  height: var(--app-title-bar-height);
-  margin-top: 0;
-}
-.typeWindows_a934d8 .winButton_a934d8 {
-  height: var(--app-title-bar-height);
-  top: 0;
-}
-.typeWindows_a934d8 .winButton_a934d8:before {
+.platform-win .typeWindows_a934d8 {
+  z-index: 102;
   position: absolute;
-  content: " ";
-  width: 12px;
+  flex-direction: row;
+  align-items: center;
+  top: 1px;
+  width: 100%;
+  margin: 0;
+  padding-top: 12px !important;
+  padding-right: 9px;
+  padding-left: 3px;
+  -webkit-app-region: drag;
+  background: transparent !important;
+}
+.platform-win .typeWindows_a934d8 .wordmark_a934d8 {
+  top: 11px;
+  left: 11px;
+  width: 52px;
   height: 12px;
-  background-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  filter: brightness(40%);
-  z-index: 2;
-  opacity: 0;
-  transition: var(--default-time) var(--default-animation) opacity;
-  pointer-events: none;
+  padding: 0;
+  -webkit-app-region: no-drag;
 }
-.typeWindows_a934d8 .winButton_a934d8:hover:before {
-  opacity: 1;
-}
-.typeWindows_a934d8 .winButton_a934d8:after {
-  position: absolute;
-  content: " ";
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: var(--app-button-active);
-  transition: var(--default-time) var(--default-animation);
-  pointer-events: none;
-}
-.typeWindows_a934d8 .winButton_a934d8:active:after {
-  opacity: 0.65;
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a934d8:nth-last-of-type(2):hover:after {
-  background-color: var(--app-button-max);
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a934d8:nth-last-of-type(2):before {
-  background-color: var(--app-button-max);
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/window_maximize.svg);
-  -webkit-mask-repeat: no-repeat;
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a934d8:nth-last-of-type(1):hover:after {
-  background-color: var(--app-button-min);
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a934d8:nth-last-of-type(1):before {
-  background-color: var(--app-button-min);
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/window_minimize.svg);
-  -webkit-mask-repeat: no-repeat;
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonClose_a934d8:hover:after {
-  background-color: var(--app-button-close);
-}
-.typeWindows_a934d8 .winButton_a934d8.winButtonClose_a934d8:before {
-  background-color: var(--app-button-close);
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/window_close.svg);
-  -webkit-mask-repeat: no-repeat;
-}
-.typeWindows_a934d8 .winButton_a934d8:hover, .typeWindows_a934d8 .winButton_a934d8:active {
-  background-color: transparent;
-}
-.typeWindows_a934d8 .winButton_a934d8 svg {
+.platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
   display: none;
 }
-
-html:not(.app-focused) .typeWindows_a934d8 .winButton_a934d8:after {
-  background-color: var(--app-button-inactive);
+.platform-win .typeWindows_a934d8 .winButton_a934d8 {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border-radius: 15px;
+  background-color: var(--background-primary);
+  background-size: 0;
+  -webkit-app-region: no-drag;
 }
-html:not(.app-focused) .typeWindows_a934d8 .winButton_a934d8.winButtonMinMax_a934d8:after {
-  background-color: var(--app-button-inactive);
+.platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
+  display: none;
+}
+.platform-win.app-focused .typeWindows_a934d8:hover div.winButton_a934d8 {
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
+  background-color: #ff5c57;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
+}
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
+  background-color: #fdbd3d;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
+}
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
+  order: 3;
+  background-color: #26c84b;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
 }
 
+.guilds_a4d4d9 {
+  margin-top: 29px;
+}
+
+.notice_be03aa, .bd-notice:first-child {
+  z-index: 103;
+  -webkit-app-region: drag;
+  border-radius: 0;
+}
+.notice_be03aa button, .notice_be03aa .closeIcon_be03aa, .bd-notice:first-child button, .bd-notice:first-child .closeIcon_be03aa {
+  -webkit-app-region: no-drag;
+}
+
+.standardSidebarView_c25c6d {
+  z-index: unset;
+}
+.standardSidebarView_c25c6d .sidebarRegionScroller_c25c6d {
+  z-index: 103;
+}
+.standardSidebarView_c25c6d .contentRegion_c25c6d {
+  z-index: 103;
+}
+.standardSidebarView_c25c6d .contentColumn_c25c6d {
+  -webkit-app-region: no-drag;
+}
+
+.platform-win .sidebar_a4d4d9 {
+  border-radius: 0;
+}
+.platform-win .sidebar_a4d4d9 .header_fd6364, .platform-win .sidebar_a4d4d9 .searchBar_f0963d {
+  z-index: 103;
+}
+.platform-win .sidebar_a4d4d9 .header_fd6364, .platform-win .sidebar_a4d4d9 .searchBarComponent_f0963d {
+  -webkit-app-region: no-drag;
+}
+.platform-win .sidebar_a4d4d9 .searchBar_f0963d {
+  -webkit-app-region: drag;
+}
+
+.chat_a7d72e {
+  z-index: 103;
+}
+
+.container_e44302 {
+  z-index: 103;
+  -webkit-app-region: drag;
+}
+.container_e44302 .topic_bf3bbb,
+.container_e44302 .title_a7d72e,
+.container_e44302 .nicknames_d6c26f > div,
+.container_e44302 .item_c2739c,
+.container_e44302 .titleWrapper_e44302[role=button] {
+  -webkit-app-region: no-drag;
+}
 /*
  *
  *	CHANNELS LIST
