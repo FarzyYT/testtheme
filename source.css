@@ -395,7 +395,7 @@ body,
   width: 52px;
   height: 12px;
   padding: 0;
-  -webkit-app-region: no-drag;
+  -webkit-app-region: drag;
 }
 .platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
   display: none;
@@ -407,7 +407,7 @@ body,
   border-radius: 15px;
   background-color: var(--background-primary);
   background-size: 0;
-  -webkit-app-region: no-drag;
+  -webkit-app-region: drag;
 }
 .platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
   display: none;
