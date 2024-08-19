@@ -6,9 +6,6 @@
   --app-watermark-one: "Material";
   --app-watermark-two: "Discord";
   --app-title-bar-height: 22px;
-  --app-button-min: hsl(39,100%,63%);
-  --app-button-max: hsl(143,100%,40%);
-  --app-button-close: hsl(1,100%,68%);
   --accent-hue: 224;
   --accent-saturation: 71%;
   --accent-lightness: 61%;
